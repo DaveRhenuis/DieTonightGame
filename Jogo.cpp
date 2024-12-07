@@ -40,7 +40,8 @@ void Jogo::render(){
 	//clear old frame
 	this->window->clear(Color::Red);
 
-	//draw game objects
+	//draw game objects (here we should call the graphics manager?)
+
 
 	//display the new frame with all drawables
 	this->window->display();

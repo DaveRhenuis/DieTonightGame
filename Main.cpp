@@ -14,10 +14,6 @@ int main()
     //Inicializar jogo
     Jogo game;
 
-    //Set
-    CircleShape shape(100.f);
-    shape.setFillColor(Color::Green);
-
     //Main game loop
     while (game.running())
     {

@@ -2,6 +2,14 @@
   GerenciadorColisoes.cpp
   GerenciadorGrafico.cpp
   Jogo.cpp
+C:\Users\rhenu\OneDrive\Escritorio\SFMLproject\SFMLPlatformer\Jogo.cpp(7,1): error C3927: '->': trailing return type is not allowed after a non-function declarator
+C:\Users\rhenu\OneDrive\Escritorio\SFMLproject\SFMLPlatformer\Jogo.cpp(7,6): error C3484: syntax error: expected '->' before the return type
+C:\Users\rhenu\OneDrive\Escritorio\SFMLproject\SFMLPlatformer\Jogo.cpp(7,7): error C3613: missing return type after '->' ('int' assumed)
+C:\Users\rhenu\OneDrive\Escritorio\SFMLproject\SFMLPlatformer\Jogo.cpp(7,1): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\rhenu\OneDrive\Escritorio\SFMLproject\SFMLPlatformer\Jogo.cpp(7,1): error C2371: 'shape': redefinition; different basic types
+      C:\Users\rhenu\OneDrive\Escritorio\SFMLproject\SFMLPlatformer\Jogo.cpp(6,13):
+      see declaration of 'shape'
+  
+C:\Users\rhenu\OneDrive\Escritorio\SFMLproject\SFMLPlatformer\Jogo.cpp(7,7): error C2146: syntax error: missing ';' before identifier 'setFillColor'
   Main.cpp
   Generating Code...
-  SFMLPlatformer.vcxproj -> C:\Users\rhenu\OneDrive\Escritorio\SFMLproject\SFMLPlatformer\x64\Debug\SFMLPlatformer.exe
