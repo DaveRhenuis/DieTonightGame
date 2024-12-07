@@ -1,12 +1,17 @@
 #pragma once
 
+#include "Jogo.h"
+
+using namespace sf;
+
 class Ente {
 	public:
 		int id;
+		RectangleShape hitBox;
 
 		Ente();
 		~Ente();
-		virtual void executar() = 0;
+		void executar();
 		void desenhar();
 	protected:
 

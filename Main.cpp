@@ -8,17 +8,14 @@
 
 using namespace sf;
 
+//Main function
 int main()
 {
-    
-    //Inicializar jogo
+    //Initializing the game
     Jogo game;
 
-    //Main game loop
-    while (game.running())
-    {
-        game.executar();   
-    }
+    //Main game loop (yes this is a loop)
+    game.executar();
 
     return 0;
 }

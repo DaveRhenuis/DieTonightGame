@@ -6,13 +6,21 @@
 #include <SFML/Network.hpp>
 #include <SFML/System.hpp>
 
+#include "Ente.h"
+
 using namespace sf;
+
+//class Ente;
 
 class Jogo {
 	public:
 		Jogo();
 		~Jogo();
 
+		//RectangleShape greenBox;
+		//Ente* theBox;
+
+		//Core game functions
 		void update();
 		void pollEvents();
 		void render();
@@ -25,9 +33,10 @@ class Jogo {
 	private:
 		RenderWindow* window;
 		VideoMode videoMode;
-		
+
 		Event event;
 
 		void initVariables();
 		void initWindow();
+		void initEnemies();
 };

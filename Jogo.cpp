@@ -2,20 +2,20 @@
 
 using namespace sf;
 
-//Construtora/Destrutora
+//Constructor and Destructor ==================================================================================================
 Jogo::Jogo(){
 	this->initVariables();
 	this->initWindow();
-
-	CircleShape shape(100.f);
-	shape.setFillColor(Color::Green);
+	this->initEnemies();
 }
 
 Jogo::~Jogo(){
 	delete this->window;
 }
 
-//Funcoes ---------------------------------------------------------------------------------------------------------------------
+//Main functions of the game ==================================================================================================
+
+//Update function
 void Jogo::update(){
 	this->pollEvents();
 }
@@ -34,25 +34,12 @@ void Jogo::pollEvents(){
 	}
 }
 
-//Render drawables
-void Jogo::render(){
-
-	//clear old frame
-	this->window->clear(Color::Red);
-
-	//draw game objects (here we should call the graphics manager?)
-
-
-	//display the new frame with all drawables
-	this->window->display();
-}
-
-//Variaveis -------------------------------------------------------------------------------------------------------------------
+//Variables initialization
 void Jogo::initVariables(){
 	this->window = nullptr;
 }
 
-//Inicializar window
+//Window initialization
 void Jogo::initWindow(){
 	this->videoMode.width = 800;
 	this->videoMode.height = 600;
@@ -60,12 +47,33 @@ void Jogo::initWindow(){
 	this->window = new RenderWindow(this->videoMode, "Die Tonight");
 }
 
-//Utilidade
+void Jogo::initEnemies(){
+	//this->theBox = new Ente;
+}
+
+//Render drawables
+void Jogo::render() {
+
+	//clear old frame
+	this->window->clear();
+
+	//draw game objects (here we should call the graphics manager?)
+	//this->window->draw(this->theBox->hitBox);
+
+	//display the new frame with all drawables
+	this->window->display();
+}
+
+
+//Utility =====================================================================================================================
 const bool Jogo::running() const{
 	return this->window->isOpen();
 }
 
+//Used to hide update and render from the main.cpp
 void Jogo::executar(){
-	this->update();
-	this->render();
+	while (this->running()){
+		this->update();
+		this->render();
+	}
 }
